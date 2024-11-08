@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Login</title>
+    <style>
+        /* Hero section styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #heroSection {
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your hero image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        #overlay {
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #headerSection h1 {
+            color: #ffffff;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Form container styling */
+        #bodySection {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #333;
+        }
+
+        /* Form elements styling */
+        #bodySection h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #bodySection input[type="number"],
+        #bodySection input[type="password"],
+        #bodySection select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        #loginbtn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #loginbtn:hover {
+            background-color: #45a049;
+        }
+
+        #bodySection p {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #bodySection a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        #bodySection a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="heroSection">
+        <div id="overlay">
+            <center>
+                <div id="headerSection">
+                    <h1>Online Voting System</h1>
+                </div>
+                <hr>
+
+                <div id="bodySection">
+                    <form action="api/login.php" method="POST">
+                        <h2>Login</h2>
+                        <input type="number" name="mobile" placeholder="Enter mobile number" required>
+                        <br><br>
+                        <input type="password" name="password" placeholder="Enter password" required>
+                        <br><br>
+                        <select id="dropbox" name="role">
+                            <option value="1">Voter</option>
+                            <option value="2">Group</option>
+                        </select>
+                        <br><br>
+                        <button id="loginbtn" type="submit">Login</button>
+                        <br><br>
+                        <p>New user? <a href="routes/register.html">Register here</a></p>
+                    </form>
+                </div>
+            </center>
+        </div>
+    </div>
+
+</body>
+</html>
